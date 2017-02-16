@@ -9,6 +9,24 @@ namespace udp_ip_client
     {
         static void Main(string[] args)
         {
+            IPAddress[] ipv4Addresses = Array.FindAll( Dns.GetHostEntry(String.Empty).AddressList, 
+                                                       a => a.AddressFamily == AddressFamily.InterNetwork);
+            IPAddress ip = ipv4Addresses[0];
+            const int port = 23000;
+
+            var clientSocket = new UdpClientSocket(ip, port);
+            try
+            {
+                Console.WriteLine( Encoding.UTF8.GetString(clientSocket.Receive()) );
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                clientSocket.Close();
+            }
         }
     }
 
