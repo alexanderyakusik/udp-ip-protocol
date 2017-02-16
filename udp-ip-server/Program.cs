@@ -22,7 +22,7 @@ namespace udp_ip_server
                     string currentTime = DateTime.Now.ToString("HH:mm:ss");
                     byte[] sendingData = Encoding.UTF8.GetBytes(currentTime);
                     int bytesSent = serverSocket.Send(sendingData);
-                    Console.WriteLine( String.Format("Sent {0} bytes at {1}.", bytesSent, currentTime) );
+                    Console.WriteLine( String.Format("Sent {0} bytes at {1}.", bytesSent.ToString(), currentTime) );
                     Thread.Sleep(sendingInterval);
                 }
             }
