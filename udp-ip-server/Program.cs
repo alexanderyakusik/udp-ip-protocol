@@ -49,7 +49,20 @@ namespace udp_ip_server
 
         public int Send(byte[] data)
         {
-            return socket.SendTo(data, remoteEndPoint);
+            int bytesSent = -1;
+            try
+            {
+                bytesSent = socket.SendTo(data, remoteEndPoint);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                socket.Close();
+            }
+            return bytesSent;
         }
 
         public void Close()
