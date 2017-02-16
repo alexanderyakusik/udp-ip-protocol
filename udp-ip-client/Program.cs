@@ -47,22 +47,11 @@ namespace udp_ip_client
 
         public byte[] Receive()
         {
-            byte[] resultBytes = null;
-            try
-            {
-                var buffer = new byte[256];
-                var bytesAmount = socket.Receive(buffer);
-                resultBytes = new byte[bytesAmount];
-                Array.Copy(buffer, resultBytes, bytesAmount);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            finally
-            {
-                socket.Close();
-            }
+            var buffer = new byte[256];
+            var bytesAmount = socket.Receive(buffer);
+            var resultBytes = new byte[bytesAmount];
+            Array.Copy(buffer, resultBytes, bytesAmount);
+
             return resultBytes;
         }
 
