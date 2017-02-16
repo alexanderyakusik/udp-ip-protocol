@@ -17,7 +17,10 @@ namespace udp_ip_client
             var clientSocket = new UdpClientSocket(ip, port);
             try
             {
-                Console.WriteLine( Encoding.UTF8.GetString(clientSocket.Receive()) );
+                while (true)
+                {
+                    Console.WriteLine(Encoding.UTF8.GetString(clientSocket.Receive()));
+                }
             }
             catch (Exception e)
             {
