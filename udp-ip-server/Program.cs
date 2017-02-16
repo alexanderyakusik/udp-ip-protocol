@@ -13,14 +13,14 @@ namespace udp_ip_server
             IPAddress ip = IPAddress.Parse("192.168.25.255");
             const int port = 23000;
             const int sendingInterval = 1000;
-            string currentTime = DateTime.Now.ToString("HH:mm:ss");
-            byte[] sendingData = Encoding.UTF8.GetBytes(currentTime);
 
             var serverSocket = new UdpServerSocket(ip, port);
             try
             { 
                 while(true)
                 {
+                    string currentTime = DateTime.Now.ToString("HH:mm:ss");
+                    byte[] sendingData = Encoding.UTF8.GetBytes(currentTime);
                     serverSocket.Send(sendingData);
                     Thread.Sleep(sendingInterval);
                 }
