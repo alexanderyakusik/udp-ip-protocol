@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udp-ip-server", "udp-ip-server.csproj", "{84850065-9728-4676-A465-80D51C234A1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udp-ip-client", "..\udp-ip-client\udp-ip-client.csproj", "{87870717-1386-4220-9422-FA747FEA249D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{696C4E9E-C5E7-415A-8DF1-3EE74C74D334}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{84850065-9728-4676-A465-80D51C234A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84850065-9728-4676-A465-80D51C234A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84850065-9728-4676-A465-80D51C234A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87870717-1386-4220-9422-FA747FEA249D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87870717-1386-4220-9422-FA747FEA249D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87870717-1386-4220-9422-FA747FEA249D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87870717-1386-4220-9422-FA747FEA249D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
