@@ -19,7 +19,7 @@ namespace udp_ip_client
             {
                 while (true)
                 {
-                    Console.WriteLine(Encoding.UTF8.GetString(clientSocket.Receive()));
+                    Console.WriteLine( String.Format("Recieved package: {0}", Encoding.UTF8.GetString( clientSocket.Receive() )) );
                 }
             }
             catch (Exception e)
